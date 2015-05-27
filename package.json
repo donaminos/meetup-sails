@@ -25,7 +25,8 @@
   },
   "scripts": {
     "start": "node app.js",
-    "debug": "node debug app.js"
+    "debug": "node debug app.js",
+    "install": "gulp install"
   },
   "main": "app.js",
   "repository": {
@@ -33,5 +34,38 @@
     "url": "git://github.com/mbuils/meetup-sails.git"
   },
   "author": "mbuils",
-  "license": ""
+  "license": "",
+  "browser": {
+    "angular": "./bower_components/angular/angular.js",
+    "angular-route": "./bower_components/angular-route/angular-route.js",
+    "angular-contenteditable": "./bower_components/angular-contenteditable/angular-contenteditable.js",
+    "angular-sails": "./bower_components/angular-sails/dist/angular-sails.js",
+    "ui.bootstrap": "./bower_components/angular-bootstrap/ui-bootstrap.js"
+  },
+  "browserify-shim": {
+    "document": "global:document",
+    "window": "global:window",
+    "console": "global:console",
+    "socket.io-client": "global:io",
+    "angular": "angular"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "browserify": "^10.2.1",
+    "browserify-shim": "^3.8.7",
+    "exorcist": "^0.4.0",
+    "gulp": "^3.8.11",
+    "gulp-angular-templatecache": "^1.6.0",
+    "gulp-util": "^3.0.4",
+    "lodash": "^3.9.3",
+    "sails.io.js": "^0.11.5",
+    "through2": "^0.6.5",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
 }

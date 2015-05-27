@@ -1,0 +1,9 @@
+<a href="#/lists" class="btn btn btn-primary">back</a>
+<button type="button" class="btn btn btn-primary" data-ng-click="add()">Add</button>
+<ul class="list-group">
+    <li class="list-group-item" data-ng-repeat="line in lines">
+        <a href="javascript:" data-ng-click="remove(line)"><i class="glyphicon glyphicon-remove"></i></a>
+        <span data-ng-model="line.name" contenteditable="true" data-ng-change="change(line)"></span>
+        <span class="badge"><input type="checkbox" data-ng-model="line.done"  data-ng-change="change(line)" /></span>
+    </li>
+</ul>

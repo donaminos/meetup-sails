@@ -6,8 +6,9 @@
  */
 
 module.exports = {
-    attributes: {
+    schema: true,
 
+    attributes: {
         name: { type: 'string' /*, unique: true, required: true*/ },
         done: { type: 'boolean' },
         list: { model: 'list' }

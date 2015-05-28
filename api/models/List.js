@@ -6,6 +6,8 @@
  */
 
 module.exports = {
+    schema: true,
+
     attributes: {
         name: { type: 'string' },
         lines: { collection: 'Line', via: 'list'/*, protected: true */}

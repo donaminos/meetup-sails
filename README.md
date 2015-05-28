@@ -10,5 +10,5 @@ a [Sails](http://sailsjs.org) application for the meetup UXRepublic n°2 (28/05/
 ## Start server
     sails lift
     
-## Start dev environnement
+## Start dev environment
     gulp

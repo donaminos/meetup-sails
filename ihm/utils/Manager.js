@@ -31,7 +31,7 @@ Service = {
 
             if (msg.verb === 'destroyed') {
                 _.each(param ? this._data[param] : this._list, function (line, index) {
-                    if (line.id === msg.id) {
+                    if (line.id == msg.id) {
                         this._list.splice(index, 1);
                     }
                 }, this);

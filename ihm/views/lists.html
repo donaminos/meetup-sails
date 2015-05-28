@@ -1,7 +1,7 @@
 <button type="button" class="btn btn btn-primary" data-ng-click="add()">Add</button>
 <ul class="list-group">
     <li class="list-group-item" data-ng-repeat="list in lists">
-        <i class="glyphicon glyphicon-remove" data-ng-click="remove(list)"></i>
+        <a href="javascript:" data-ng-click="remove(list)"><i class="glyphicon glyphicon-remove"></i></a>
         <a href="#/list/{{list.id}}"><i class="glyphicon glyphicon-folder-open"></i></a>
         <span data-ng-model="list.name" contenteditable="true" data-ng-change="change(list)"></span>
         <span class="badge" data-ng-bind="list.lines.length"></span>

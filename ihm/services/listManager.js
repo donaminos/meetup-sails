@@ -29,6 +29,26 @@ listManager = ['$q', 'communicator', function ($q, communicator) {
                         }
                     }, this);
                 }
+
+                if (msg.verb === 'removedFrom' && msg.attribute === 'lines') {
+                    if (this._data.id && msg.id == this._data.id) {
+                        _.each(this._data.lines, function (line, index) {
+                            if (line.id == msg.removedId) {
+                                this._list.splice(index, 1);
+                            }
+                        }, this);
+                    }
+
+                    _.each(this._list, function (list) {
+                        if (list.id && msg.id == list.id) {
+                            _.each(list.lines, function (line, index) {
+                                if (line.id == msg.removedId) {
+                                    list.lines.splice(index, 1);
+                                }
+                            }, this);
+                        }
+                    }, this);
+                }
             }.bind(this));
 
             return this;
